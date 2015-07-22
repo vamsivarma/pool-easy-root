@@ -1,0 +1,9 @@
+#addVehicle td
+{
+	font-size: 2em;
+}
+#addVehicle input,#addVehicle textarea,#addVehicle select
+{
+	font-size: 1em;
+	margin: 20px;
+}

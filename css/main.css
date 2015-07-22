@@ -1,0 +1,33 @@
+.button
+{
+	background-color: #55aadd;
+	display: inline-block;
+	color: white;
+	font-size: 4em;
+	margin: 1%;
+	padding: 2%;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+.nselected
+{
+	font-size: 1em;
+	padding: 1%;
+}
+.selected
+{
+	font-size: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+.hide
+{
+	height: 0%;
+	border: 0px;
+	transition: all 0.5s;
+}
+.frame
+{
+	height: 80%;
+	width: 100%;
+}
