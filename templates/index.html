@@ -1,4 +1,13 @@
 <center>
-    <div class="button" value="1"><a href="#/!/poolBuddy">Request a Drop</a></div>
-    <div class="button" value="2"><a href="#/!/poolOwner">Add your vehicle</a></div>
+	<div class="reqButtonWrap">
+        <a href="#/!/poolBuddy"><div class="reqButton" value="1">Ask for a Lift</div></a><br/>
+        <a href="#/!/poolOwner"><div class="reqButton" value="2">Offer a Lift</div></a>
+    </div>
 </center>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".reqButtonWrap").css("top",($(window).height()-parseInt($(".reqButtonWrap").css("height"))  - 100)/2);
+	$($(".reqButton")[0]).css("width",$($(".reqButton")[1]).css("width"));
+})
+</script>

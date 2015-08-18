@@ -1,13 +1,28 @@
-.button
+.reqButton
 {
-	background-color: #55aadd;
-	display: inline-block;
-	color: white;
-	font-size: 4em;
-	margin: 1%;
-	padding: 2%;
-	cursor: pointer;
-	transition: all 0.5s;
+  display: inline-block;
+  color: white;
+  font-size: 2em;
+  margin: 1%;
+  padding: 2%;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid #33CCCC;
+  transition: all 0.5s;
+  width: 292px !important;
+  border-radius: 10px;
+  color: black;
+  text-align: center;    
+  height: 110px;             
+  text-transform: uppercase;
+}
+.reqButton:hover
+{
+	box-shadow: 10px 10px 5px #888888;
+}
+.reqButtonWrap
+{
+	position: relative;
 }
 .nselected
 {
@@ -30,4 +45,37 @@
 {
 	height: 80%;
 	width: 100%;
+}
+.carImg
+{
+	left: 50px;
+	opacity: 0;
+	animation: moveCar 3s infinite linear;
+}
+@keyframes moveCar
+{
+	0% 		{left: 100px; opacity: 0;}
+	50% 	{left: 	350px; opacity: 1;}
+	75% 	{left: 	600px; opacity: 1;}
+	100% 	{left: 	1000px; opacity: 0;}
+}
+
+.poolHeaderMarkupHolder {
+  height: 50px;
+  border-bottom: 1px solid #33CCCC;
+}
+
+.poolHeaderMarkup {
+
+}
+
+.poolAppWelcomMessage {
+      float: right;
+      display: inline-block;
+      height: 100%;
+      font-size: 18px;
+      position: relative;
+      right: 20px;
+      font-weight: bold;
+      line-height: 40px;
 }

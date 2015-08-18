@@ -1,0 +1,22 @@
+.poolBuddyPageHolder .fixed-table-toolbar .btn {
+    height: 34px important;
+}
+
+#myPoolOwnerAnchor {
+    z-index: -999;
+}
+
+.poolBuddyTitle {
+  text-align: center;
+  font-size: 18px;
+  line-height: 26px;
+  margin-top: 10px;
+  color: #33CCCC;    
+  font-weight: bold;
+}
+
+
+
+.addVerhicleBtn {
+ background-color: #33CCCC !important;
+}

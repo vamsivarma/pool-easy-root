@@ -1,85 +1,89 @@
-<html>
-<head>
-	<title>
-		Add Your Vehicle
-	</title>
-	<link rel="stylesheet" type="text/css" href="css/addVehicle.css">
-</head>
-<body>
+
 		<center>
-			<form id="addVehicle">
+            <div class="poolBuddyTitle"> Please provide your vehicle information </div><br/>
+			<form role="form" id="addVehicle" name="addVehicle" ng-submit="addVechicleInfo()">
 				<table>
 					<tr>
-						<td>
+						<td class="dont">
+						</td>
+						<td class="detailHead">
 							Name
 						</td>
 						<td>
-							<input name="name" type="text" value="taken from session"/>
+							<input name="name" type="text" ng-model="newVehicle.ownerName" disabled/>
 						</td>
+			<!-- 			<td class="description">
+							(later taken from the session)
+						</td> -->
 					</tr>
 					<tr>
-						<td>
-							Vehicle Type<br>(eg: bike, car)
+						<td rowspan=3 class="dont">
+							Vehicle Details
+						</td>
+						<td class="detailHead">
+							Type
 						</td>
 						<td>
-							<input name="vtype" type="text"/>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Vehicle No:
-						</td>
-						<td>
-							<input name="vno" type="text"/>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							No of extra seats
-						</td>
-						<td>
-							<input name="nseats" type="number" min=1 value="1"/>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Destination Point
-						</td>
-						<td>
-							<select name="destpt">
-								<option value="Madhapur">Madhapur</option>
-								<option value="Kondapur">Kondapur</option>
+							<select name="vtype" ng-model="newVehicle.Vehicletype" ng-change="vechTypeChange()">
+								<option value="1">Bike</option>
+								<option value="2">Car</option>
 							</select>
 						</td>
+				<!-- 		<td class="description" rowspan="5">
+							<div class="description" style="transform: rotate(-60deg)">(will be auto populated from db/cookie)</div>
+						</td> -->
 					</tr>
 					<tr>
-						<td>
-							Remarks for Route/Destination
+						<td class="detailHead">
+							Number
 						</td>
 						<td>
-							<textarea name="remarks" form="addVehicle" cols=25 rows=3></textarea>
+							<input name="vno" type="text" ng-model="newVehicle.vehicleNumber" required/>
 						</td>
 					</tr>
 					<tr>
-						<td>
-							Time
+						<td class="detailHead">
+							No of seats offered
 						</td>
 						<td>
-							<select name="hour">
-
-							</select> (hour)
-							<select name="min">
-
-							</select> (min)
-							<select name="ampm">
-
+							<input name="nseats" id="Noofvacantseats" type="number" min=1 ng-model="newVehicle.Noofvacantseats" required/>
+						</td>
+					</tr>
+					<tr>
+						<td rowspan=2 class="dont">
+							Travel Details
+						</td>
+						<td class="detailHead">
+							Enter your destination point
+						</td>
+						<td>
+							<textarea name="location" form="addVehicle" ng-model="newVehicle.Location" cols=25 rows=3 required></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td class="detailHead">
+							Leaving in
+						</td>
+						<td>
+							<select name="tdiff" ng-model="newVehicle.poolTime">
+								<option value="0">few mins</option>
+								<option value="1">15 mins</option>
+								<option value="2">half an hour</option>
+								<option value="3">an hour</option>
+								<option value="4">custom</option>
 							</select>
+							<div ng-show="newVehicle.poolTime == '4'">
+							<input type="time" name="startTime" ng-model="newVehicle.Begintime"/>
+                            <input type="time" name="endTime" ng-model="newVehicle.Endtime"/>
+							</div>
 						</td>
 					</tr>
 					<tr>
 						<td colspan=2>
+						</td>
+						<td class="dont submitAdd">
 							<center>
-								<input type="submit" value="Add" style="width:8em;">
+								<input class="addVerhicleBtn" type="submit" value="Add" style="width:80%;min-width: 8em;">
 							</center>
 						</td>
 					</tr>
@@ -87,5 +91,4 @@
 				</table>
 			</form>
 		</center>
-	</body>
-</html>
+		<div class="alert alert-success ng-hide vehicleAddMsg" role="alert" style="text-align:Center"><h2>Vehicle Added Successfully</h2></div>

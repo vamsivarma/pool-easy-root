@@ -1,9 +1,61 @@
-#addVehicle td
+#addVehicle td:not(.description)
 {
-	font-size: 2em;
+	font-size: 1.5em;
+	border-top: 1px solid #aaa;
+	margin: 0px;
+}
+#addVehicle tr td
+{
+	background-color: none;
+	padding-left: 10px;
+	transition: background-color 0.5s;
+}
+.dont:not(.submitAdd)
+{
+	color: #aaa;
+	padding-right: 20px;
+}
+.detailHead
+{
+	color: #333;
+	text-align: right;
+	padding-right: 10px;
+}
+.detailHead:hover,.detailHead:hover+td
+{
+	background-color: #ddd;
 }
 #addVehicle input,#addVehicle textarea,#addVehicle select
 {
 	font-size: 1em;
 	margin: 20px;
+	padding: 2%;
 }
+#addVehicle .description
+{
+	font-size: 1em;
+	color: #55aadd;
+}
+#addVehicle input, #addVehicle select, #addVehicle textarea
+{
+	border-radius: 5px;
+	border: #ddd 2px solid;
+	transition: font-size 0.5s, border 1s, border-radius 0.5s;
+}
+#addVehicle input:hover, #addVehicle select:hover, #addVehicle textarea:hover
+{
+	border-radius: 7px;
+	border: #55aadd 2px solid;
+	outline: 0;
+}
+#addVehicle input:focus, #addVehicle select:focus, #addVehicle textarea:focus
+{
+	border-radius: 10px;
+	border: #d55 2px solid;
+	outline: 0;
+}
+body *
+{
+	font-family: "Segoe ui", Tahoma;
+}
+

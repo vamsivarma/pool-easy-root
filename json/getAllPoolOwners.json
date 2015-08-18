@@ -1,0 +1,31 @@
+{
+    "status": "success",
+    "code": 200,
+    "data": {
+        "poolOwners": [{
+                "name": "Sanjeev",
+                "vehicleNumber": "",
+                "vehicleTypeId": 1,
+                "remainingSeats": 1,
+                "locationId": 1,
+                "timerange": [1437630964726, 1437634564726]
+            },
+            {
+                "name": "Nikhil",
+                "vehicleNumber": "",
+                "vehicleTypeId": 1,
+                "remainingSeats": 1,
+                "locationId": 1,
+                "timerange": [1437630964726, 1437634564726]
+            },
+            {
+                "name": "Joseph",
+                "vehicleNumber": "",
+                "vehicleTypeId": 1,
+                "remainingSeats": 1,
+                "locationId": 1,
+                "timerange": [1437630964726, 1437634564726]
+            }           
+        ]
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "status": "success",
+    "code": 200,
+    "data": {
+        "vehicleTypes": [
+            {
+                "id": 1,
+                "name": "Bike"
+            },
+            {
+                "id": 2,
+                "name": "Car"
+            }
+        ],
+        "destinationPoints": [
+            {
+                "id": 1,
+                "name": "Nizampet",
+                "dropPoints": [
+                    "Hi-Tech City MMTS",
+                    "KPHB 4th Phase",
+                    "KPHB 3rd Phase",
+                    "JNTU"
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Banjara Hills",
+                "dropPoints": [
+                    "In-orbit",
+                    "Film Nagar"
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Panjagutta",
+                "dropPoints": [
+                    "Madhapur",
+                    "Pedamma Temple",
+                    "TDP Office"
+                ]
+            }
+        ]
+    }
+}
